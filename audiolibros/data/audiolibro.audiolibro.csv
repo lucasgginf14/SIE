@@ -1,0 +1,7 @@
+id,titulo,duracion,formato,isbn,precio,autores_ids/id,genero_id/id,productor_id/id
+audiolibro.audiolibro_1,El amor en los tiempos del cólera,10.50,mp3,9781234567890,9.99,audiolibro.autor_1,audiolibro.genero_1,audiolibro.productor_1
+audiolibro.audiolibro_2,Choque de reyes,32.00,aac,9789876543210,14.50,audiolibro.autor_2,audiolibro.genero_2,audiolibro.productor_2
+audiolibro.audiolibro_3,Cosmos,11.25,mp3,9781111111111,12.00,audiolibro.autor_3,audiolibro.genero_3,audiolibro.productor_3
+audiolibro.audiolibro_4,Los pilares de la Tierra,34.75,mp3,9782222222222,13.50,"audiolibro.autor_4,audiolibro.autor_2",audiolibro.genero_2,audiolibro.productor_4
+audiolibro.audiolibro_5,La sombra del viento,17.80,m4a,9783333333333,11.00,audiolibro.autor_1,audiolibro.genero_1,audiolibro.productor_5
+audiolibro.audiolibro_6,Breves respuestas a grandes preguntas,6.75,flac,9784444444444,8.50,"audiolibro.autor_2,audiolibro.autor_3",audiolibro.genero_3,audiolibro.productor_1

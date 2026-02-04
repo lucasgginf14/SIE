@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- VISTAS DE AUDIOLIBRO -->
+    <record id="audiolibro_view_list" model="ir.ui.view">
+        <field name="name">audiolibro.audiolibro.view.list</field>
+        <field name="model">audiolibro.audiolibro</field>
+        <field name="arch" type="xml">
+            <list string="Lista de Audiolibros">
+                <field name="titulo"/>
+                <field name="autores_ids" widget="many2many_tags"/>
+                <field name="genero_id"/>
+                <field name="productor_id"/>
+                <field name="duracion" widget="float_time"/>
+                <field name="isbn"/>
+                <field name="precio"/>
+                <field name="formato"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="audiolibro_view_form" model="ir.ui.view">
+        <field name="name">audiolibro.audiolibro.view.form</field>
+        <field name="model">audiolibro.audiolibro</field>
+        <field name="arch" type="xml">
+            <form string="Formulario Audiolibro">
+                <sheet>
+                    <field name="portada" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="titulo" placeholder="Título del Audiolibro..."/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group string="Información Básica">
+                            <field name="autores_ids" widget="many2many_tags"/>
+                            <field name="genero_id"/>
+                            <field name="productor_id"/>
+                        </group>
+                        <group string="Información Comercial">
+                            <field name="duracion" widget="float_time"/>
+                            <field name="isbn"/>
+                            <field name="precio"/>
+                            <field name="formato"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- VISTAS DE AUTOR -->
+<record id="autor_view_list" model="ir.ui.view">
+    <field name="name">audiolibro.autor.view.list</field>
+    <field name="model">audiolibro.autor</field>
+    <field name="arch" type="xml">
+        <list string="Autores">
+            <field name="nombre"/>
+            <field name="apellidos"/>
+            <field name="nacionalidad"/>
+            <field name="fecha_nacimiento"/>
+        </list>
+    </field>
+</record>
+
+<record id="autor_view_form" model="ir.ui.view">
+    <field name="name">audiolibro.autor.view.form</field>
+    <field name="model">audiolibro.autor</field>
+    <field name="arch" type="xml">
+        <form string="Formulario Autor">
+            <sheet>
+                <group>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="apellidos"/>
+                        <field name="fecha_nacimiento"/>
+                        <field name="nacionalidad"/>
+                    </group>
+                    <group>
+                        <field name="biografia"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Audiolibros">
+                        <field name="audiolibros_ids">
+                            <list editable="bottom">
+                                <field name="titulo"/>
+                                <field name="genero_id"/>
+                                <field name="productor_id"/>
+                                <field name="precio"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+    <!-- VISTAS DE GÉNERO -->
+    <record id="genero_view_list" model="ir.ui.view">
+    <field name="name">audiolibro.genero.view.list</field>
+    <field name="model">audiolibro.genero</field>
+    <field name="arch" type="xml">
+        <list string="Géneros">
+            <field name="nombre"/>
+            <field name="descripcion"/>
+        </list>
+    </field>
+</record>
+
+<record id="genero_view_form" model="ir.ui.view">
+    <field name="name">audiolibro.genero.view.form</field>
+    <field name="model">audiolibro.genero</field>
+    <field name="arch" type="xml">
+        <form string="Formulario Género">
+            <sheet>
+                <group>
+                    <field name="nombre"/>
+                    <field name="descripcion"/>
+                </group>
+                <notebook>
+                    <page string="Audiolibros">
+                        <field name="audiolibros_ids">
+                            <list editable="bottom">
+                                <field name="titulo"/>
+                                <field name="autores_ids" widget="many2many_tags"/>
+                                <field name="productor_id"/>
+                                <field name="precio"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+    <!-- VISTAS DE PRODUCTOR -->
+    <record id="productor_view_list" model="ir.ui.view">
+    <field name="name">audiolibro.productor.view.list</field>
+    <field name="model">audiolibro.productor</field>
+    <field name="arch" type="xml">
+        <list string="Productores">
+            <field name="nombre"/>
+            <field name="nacionalidad"/>
+            <field name="email"/>
+            <field name="telefono"/>
+        </list>
+    </field>
+</record>
+
+<record id="productor_view_form" model="ir.ui.view">
+    <field name="name">audiolibro.productor.view.form</field>
+    <field name="model">audiolibro.productor</field>
+    <field name="arch" type="xml">
+        <form string="Formulario Productor">
+            <sheet>
+                <group>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="nacionalidad"/>
+                        <field name="email"/>
+                        <field name="telefono"/>
+                    </group>
+                    <group>
+                        <field name="descripcion"/>
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Audiolibros">
+                        <field name="audiolibros_ids">
+                            <list editable="bottom">
+                                <field name="titulo"/>
+                                <field name="autores_ids" widget="many2many_tags"/>
+                                <field name="genero_id"/>
+                                <field name="precio"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+</odoo>

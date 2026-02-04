@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_audiolibro_user,access.audiolibro,model_audiolibro_audiolibro,base.group_user,1,1,1,1
+access_autor_user,access.autor,model_audiolibro_autor,base.group_user,1,1,1,1
+access_genero_user,access.genero,model_audiolibro_genero,base.group_user,1,1,1,1
+access_productor_user,access.productor,model_audiolibro_productor,base.group_user,1,1,1,1

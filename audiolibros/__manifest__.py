@@ -1,0 +1,27 @@
+{
+    'name': 'Audiolibros',
+    'description': 'Módulo para la gestión de la biblioteca de audiolibros de una compañía.',
+    'summary': 'Gestión de catálogo de audiolibros',
+    'author': 'Adrián Edreira y Lucas García',
+    'version': '1.0',
+    'category': 'Industria',
+    'depends': ['base'],
+    'installable': True,
+    'application': True,
+    'data': [
+        'security/ir.model.access.csv',
+        'views/audiolibro_views.xml',
+        'views/audiolibro_menus.xml',
+        'data/audiolibro.productor.csv',
+        'data/audiolibro.autor.csv',
+        'data/audiolibro.genero.csv',
+        'data/audiolibro.audiolibro.csv',
+    ],
+    'demo': [
+        'data/audiolibro.productor.csv',
+        'data/audiolibro.autor.csv',
+        'data/audiolibro.genero.csv',
+        'data/audiolibro.audiolibro.csv',
+    ],
+    'auto_install': False,
+}

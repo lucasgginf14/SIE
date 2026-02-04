@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ACCIONES -->
+    <record id="audiolibro_action" model="ir.actions.act_window">
+        <field name="name">Catálogo de Audiolibros</field>
+        <field name="res_model">audiolibro.audiolibro</field>
+        <field name="view_mode">list,form</field>  <!-- CAMBIADO: primero list, no kanban -->
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                ¡Crea tu primer audiolibro!
+            </p>
+            <p>
+                Aquí podrás gestionar todo el catálogo de audiolibros de tu biblioteca.
+                <br/>
+                Añade información detallada sobre títulos, autores, géneros y precios.
+            </p>
+        </field>
+    </record>
+
+    <record id="autor_action" model="ir.actions.act_window">
+        <field name="name">Autores</field>
+        <field name="res_model">audiolibro.autor</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                ¡Registra tu primer autor!
+            </p>
+            <p>
+                Gestiona los autores de tu catálogo de audiolibros.
+            </p>
+        </field>
+    </record>
+
+    <record id="genero_action" model="ir.actions.act_window">
+        <field name="name">Géneros</field>
+        <field name="res_model">audiolibro.genero</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                ¡Crea tu primer género!
+            </p>
+            <p>
+                Organiza tu catálogo por géneros literarios.
+            </p>
+        </field>
+    </record>
+
+    <record id="productor_action" model="ir.actions.act_window">
+        <field name="name">Productores</field>
+        <field name="res_model">audiolibro.productor</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                ¡Registra tu primer productor!
+            </p>
+            <p>
+                Gestiona los productores de tus audiolibros.
+            </p>
+        </field>
+    </record>
+
+    <!-- MENÚS -->
+    <menuitem id="audiolibros_menu_raiz"
+              name="Audiolibros"
+              sequence="10"/>
+
+    <menuitem id="menu_catalogo_audiolibros"
+              name="Catálogo"
+              parent="audiolibros_menu_raiz"
+              action="audiolibro_action"
+              sequence="10"/>
+
+    <menuitem id="audiolibros_menu_configuracion"
+              name="Configuración"
+              parent="audiolibros_menu_raiz"
+              sequence="100"
+              groups="base.group_system"/>
+
+    <menuitem id="menu_config_autores"
+              name="Autores"
+              parent="audiolibros_menu_configuracion"
+              action="autor_action"
+              sequence="10"/>
+
+    <menuitem id="menu_config_generos"
+              name="Géneros"
+              parent="audiolibros_menu_configuracion"
+              action="genero_action"
+              sequence="20"/>
+
+    <menuitem id="menu_config_productores"
+              name="Productores"
+              parent="audiolibros_menu_configuracion"
+              action="productor_action"
+              sequence="30"/>
+
+</odoo>

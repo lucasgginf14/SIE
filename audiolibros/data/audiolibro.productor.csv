@@ -1,0 +1,6 @@
+id,nombre,descripcion,nacionalidad,email,telefono
+audiolibro.productor_1,Editorial Sonora,"Editorial especializada en audiolibros de ficción",España,editorialsonora@smtp.com,666123456
+audiolibro.productor_2,AudioLibros SA,"Productora independiente de narraciones",México,audiolibrosa@smtp.com,555654321
+audiolibro.productor_3,Vozes,"Productora centrada en clásicos y literatura",Argentina,vozes@smtp.com,444987654
+audiolibro.productor_4,Estudio Aurora,"Productora de audiolibros infantiles y juveniles",Colombia,estudioaurora@smtp.com,333321987
+audiolibro.productor_5,Gran Narrativa,"Productora especializada en no ficción",Chile,grannarrativa@smtp.com,222789123

@@ -1,0 +1,5 @@
+id,nombre,descripcion
+audiolibro.genero_1,Historia,"Relatos sobre eventos históricos"
+audiolibro.genero_2,Ficción,"Obras imaginarias y narrativas"
+audiolibro.genero_3,Ciencia ficción,"Historias basadas en avances científicos"
+audiolibro.genero_4,No ficción,"Ensayos y obras basadas en hechos reales"
